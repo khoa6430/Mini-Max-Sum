@@ -1,9 +1,6 @@
 
-
 miniMaxSum = () =>{
-
     let arr = [13,5,11,9,7];
-
     if(arr.length!=5){  //if not equal five positive integers
         return;
     }
@@ -28,15 +25,34 @@ miniMaxSum = () =>{
             maximum += arrsort[i];  // sum maximum sum
             countmax++;   // increase count elements for maximum sum
         }
-   
     }
     console.log(minimum , maximum);
 } 
 
-
-
+bonus = () =>{
+    let arr = [1,3,5,7,9];
+    let totalarray = 0;
+    let  max = min = arr[0];
+    let evenarr =[];
+    let oddeven =[];
+    for(let i= 0;i<arr.length;i++){ 
+        totalarray +=arr[i];    // sum total array
+        if(arr[i]<min){         //check min
+            min = arr[i];
+        }
+        if(arr[i]>max){         //check max
+            max = arr[i];
+        }
+        arr[i]%2==0?evenarr.push(arr[i]):oddeven.push(arr[i]);  //check even or odd ==> push into array
+    }
+    console.log("Total of array: " + totalarray);
+    console.log("Min in array: " + min);
+    console.log("Max in array: " + max);
+    console.log("Even elements in array: " + evenarr);
+    console.log("Odd elements: " + oddeven);
+}
 miniMaxSum();
-
+bonus();
 
 
 
